@@ -8,10 +8,29 @@ import java.time.LocalDate;
 @Entity
 @Data
 public class Reservation {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public long idReservation;
-    LocalDate dateDebut;
-    LocalDate dateFin;
-    @Enumerated(EnumType.STRING) StatutReservation statut;
+    private Long idReservation;
+
+    private LocalDate dateDebut;
+    private LocalDate dateFin;
+
+    @Enumerated(EnumType.STRING)
+    private StatutReservation statut;
+
+
+    // Vehicule 1 ---- * Reservation
+    @ManyToOne
+    private Vehicule vehicule;
+
+
+    // Client 1 ---- * Reservation
+    @ManyToOne
+    private Client client;
+
+
+    // Reservation 1 ---- 1 Contrat
+    @OneToOne
+    private Contrat contrat;
 }

@@ -1,9 +1,6 @@
 package tn.esprit.aziz_benamor_4SSA3.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -11,6 +8,7 @@ import java.time.LocalDate;
 @Entity
 @Data
 public class Maintenance {
+    @ManyToOne
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idMaintenance;
