@@ -7,8 +7,7 @@ import lombok.Data;
 @Data
 public class Employe {
     @ManyToOne
-    Agence A;
-
+    private Agence agence;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idEmploye;

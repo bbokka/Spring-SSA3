@@ -9,6 +9,7 @@ import java.time.LocalDate;
 @Data
 public class Maintenance {
     @ManyToOne
+    private Vehicule vehicule;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idMaintenance;

@@ -9,15 +9,16 @@ import java.util.Set;
 @Entity
 @Data
 public class Client {
-    @OneToMany(mappedBy = "Reservation")
-    Set<Reservation> reservations;
+
+    @OneToMany(mappedBy = "client")
+    private Set<Reservation> reservations;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idClient;
-    String nom ;
-    String prenom;
-    String email;
-    String telephone;
-    String numPermis;
-    LocalDate dateInscription;
+    private String nom;
+    private String prenom;
+    private String email;
+    private String telephone;
+    private String numPermis;
+    private LocalDate dateInscription;
 }

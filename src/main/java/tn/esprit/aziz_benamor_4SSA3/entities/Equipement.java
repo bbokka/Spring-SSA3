@@ -8,7 +8,7 @@ import java.util.Set;
 @Entity
 @Data
 public class Equipement {
-    @ManyToMany(mappedBy = "Vehicule")
+    @ManyToMany(mappedBy = "equipements")
     Set<Vehicule> vehicules;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

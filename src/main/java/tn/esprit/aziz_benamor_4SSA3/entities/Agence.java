@@ -8,15 +8,16 @@ import java.util.Set;
 @Entity
 @Data
 public class Agence {
-    @OneToMany(mappedBy = "Employe")
-    Set<Employe>E;
-    @OneToMany(mappedBy = "Vehicule")
-    Set<Vehicule> V;
+
+    @OneToMany(mappedBy = "agence")
+    private Set<Employe> employes;
+    @OneToMany(mappedBy = "agence")
+    private Set<Vehicule> vehicules;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idAgence;
-    String nom;
-    String ville;
-    String adresse;
-    String telephone;
+    private String nom;
+    private String ville;
+    private String adresse;
+    private String telephone;
 }
