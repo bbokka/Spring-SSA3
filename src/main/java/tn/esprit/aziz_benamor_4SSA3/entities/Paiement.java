@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class Paiement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idPaiement;
+    private Long idPaiement;
     BigDecimal montant;
     LocalDate  datePaiement;
     @Enumerated(EnumType.STRING) private ModePaiement modePaiement;

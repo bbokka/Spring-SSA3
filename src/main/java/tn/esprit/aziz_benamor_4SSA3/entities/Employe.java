@@ -10,7 +10,7 @@ public class Employe {
     private Agence agence;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idEmploye;
+    private Long idEmploye;
     String nom;
     String prenom;
     @Enumerated(EnumType.STRING) RoleEmploye role;

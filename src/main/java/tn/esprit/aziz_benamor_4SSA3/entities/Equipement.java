@@ -12,7 +12,7 @@ public class Equipement {
     Set<Vehicule> vehicules;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idEquipement;
+    private Long idEquipement;
     String libelle;
 
 }

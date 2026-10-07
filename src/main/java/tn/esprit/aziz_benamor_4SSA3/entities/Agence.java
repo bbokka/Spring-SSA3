@@ -15,7 +15,7 @@ public class Agence {
     private Set<Vehicule> vehicules;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idAgence;
+    private Long idAgence;
     private String nom;
     private String ville;
     private String adresse;

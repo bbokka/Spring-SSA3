@@ -12,7 +12,7 @@ public class Maintenance {
     private Vehicule vehicule;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idMaintenance;
+    private Long idMaintenance;
     LocalDate dateDebut;
     LocalDate dateFin;
     String description;

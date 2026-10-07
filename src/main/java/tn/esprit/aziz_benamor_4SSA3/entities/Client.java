@@ -14,7 +14,7 @@ public class Client {
     private Set<Reservation> reservations;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idClient;
+    private Long idClient;
     private String nom;
     private String prenom;
     private String email;
